@@ -245,7 +245,7 @@ if (isset($_POST['hapus'])) {
                         ?>
                     </tbody>
                 </table>
-                <a href="form.php" class="card-link mt-3">Kembali</a>
+                <a href="form.php" class="card-link mt-3 btn btn-secondary">Kembali</a>
             </div>
         </div>
     </div>
