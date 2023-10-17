@@ -35,7 +35,8 @@
                     </label>
                 </div>
                 <div class="mb-3 form-check">
-                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_perempuan" value="Perempuan">
+                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_perempuan"
+                        value="Perempuan">
                     <label class="form-check-label" for="jenis_perempuan">
                         Perempuan
                     </label>
@@ -54,56 +55,11 @@
                     <label for="email" class="form-label">Email</label>
                     <input type="" class="form-control" id="email" aria-describedby="emailHelp" name="email">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" name="input">Submit</button>
             </form>
         </div>
     </div>
-    <script>
-        function validateForm() {
-            var nama = document.getElementById("nama").value;
-            var nim = document.getElementById("nim").value;
-            var alamat = document.getElementById("alamat").value;
-            var jenis_kelamin_laki = document.getElementById("jenis_laki").checked;
-            var jenis_kelamin_perempuan = document.getElementById("jenis_perempuan").checked;
-            var jurusan = document.getElementById("jurusan").value;
-            var email = document.getElementById("email").value;
-
-            var namaRegex = /^[a-zA-Z\s]+$/;
-            if (!nama.match(namaRegex)) {
-                alert("Nama hanya boleh berisi huruf dan spasi.");
-                return false;
-            }
-
-            if (nim.length !== 10 || isNaN(nim)) {
-                alert("NIM harus terdiri dari 10 digit angka.");
-                return false;
-            }
-
-            if (alamat.trim() === "") {
-                alert("Alamat harus diisi.");
-                return false;
-            }
-
-            if (!jenis_kelamin_laki && !jenis_kelamin_perempuan) {
-                alert("Pilih jenis kelamin.");
-                return false;
-            }
-
-            if (jurusan === "Pilih Jurusan") {
-                alert("Pilih jurusan.");
-                return false;
-            }
-
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!email.match(emailRegex)) {
-                alert("Masukkan alamat email yang valid.");
-                return false;
-            }
-
-            alert("Data anda berhasil disimpan.");
-            return true;
-        }
-    </script>
+    <script src="config/validateForm.js"></script>
 </body>
 
 </html>
